@@ -1,7 +1,14 @@
 name: Trigger auto deployment
 on:
   # 手動実行用トリガー
-  workflow_dispatch:      
+  workflow_dispatch:
+   
+# Add envs 
+env:
+  RESOURCE_GROUP_NAME: Handson01-CICD
+  CONTAINERAPP_NAME: ctapp-demo-ui
+  API_BASE_URL: https://ctapp-demo-api.ambitioussea-087c7fc4.koreacentral.azurecontainerapps.io
+  
 jobs:
   build:
     runs-on: ubuntu-22.04
